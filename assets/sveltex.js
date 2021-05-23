@@ -1,4 +1,4 @@
-const context = require.context("../../../assets/js/svelte", false, /\.svelte/);
+const context = require.context("../../../assets/js/svelte", true, /\.svelte/);
 window.onload = function() {
   context.keys().forEach(file => {
     const componentName = file.replace(/\.\/|\.svelte/g, "");
