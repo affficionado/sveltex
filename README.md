@@ -24,7 +24,7 @@ by adding `sveltex` to your list of dependencies in `mix.exs`:
    ```elixir
        def deps do
          [
-           {:sveltex, git: "https://github.com/virkillz/sveltex.git", tag: "0.1.2"}
+           {:sveltex, git: "https://github.com/affficionado/sveltex.git", tag: "1.2"}
          ]
        end`
 
@@ -36,9 +36,9 @@ by adding `sveltex` to your list of dependencies in `mix.exs`:
    mix deps.get
    ```
 
-2. Install Svelte & Svelte Loader as Javascript dependency
+2. Install Javascript counterpart
   ```
-   cd assets && npm install svelte svelte-loader --save
+   cd assets && npm install sveltex-js
   ```
 
 3. Edit your Webpack config file `/assets/webpack.config.js`
@@ -89,14 +89,14 @@ by adding `sveltex` to your list of dependencies in `mix.exs`:
 
   ```javascript
 
-   import "../../deps/sveltex/assets/sveltex.js";
+   import "../node_modules/sveltex-js/index.js";
 
   ```
 
 
 ## How to use ?
 
-Put your svelte component files (`.svelte`) under `/assets/js/svelte` directory.
+Put your svelte component files (`.svelte`) under `/assets/js/svelte` directory (optional subdirectories are allowed).
 
 Example: `test.svelte`
 
